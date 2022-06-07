@@ -1,0 +1,213 @@
+<div
+    class="offcanvas offcanvas-end"
+    tabIndex="-1"
+    id="offcanvasWithBackdrop"
+    aria-labelledby="offcanvasWithBackdropLabel"
+>
+    <div class="offcanvas-header border-0 mt-1 mb-0 bg-white h2 text-decoration-none text-dark">
+        <a href="/" class="text-decoration-none text-black">
+            <h3>
+                u<h1 class="d-inline">MM</h1>ansyz
+            </h3>
+        </a>
+       
+
+        <button
+            type="button"
+            class="close-btn btn text-reset p-2"
+            data-bs-dismiss="offcanvas"
+            aria-label="Close"
+        >
+            <i class="bi bi-x-lg"></i>
+        </button>
+    </div>
+    <div class="offcanvas-body">
+        <div class="flex-shrink-0  ">
+            <ul class="list-unstyled ps-0">
+                <li class="mb-1">
+                    <button
+                        class="btn btn-toggle align-items-center rounded collapsed "
+                        data-bs-toggle="collapse"
+                        data-bs-target="#home-collapse"
+                        aria-expanded="true"
+                        style="font: size 18px;"
+                    >
+                        <strong>Giriş sahypa</strong>
+                    </button>
+                    <div class="collapse show" id="home-collapse">
+                        <ul
+                            class="btn-toggle-nav list-unstyled fw-normal mt-2 pb-1 small ps-2"
+                            style="font-size: 16px;"
+                        >
+                            <li>
+                                <a
+                                    href="/contact"
+                                    class="a-dark rounded"
+                                >
+                                    Bukjalar
+                                </a>
+                            </li>
+                            <li>
+                                <a
+                                    href="/about"
+                                    class="a-dark rounded"
+                                >
+                                    Kadalar
+                                </a>
+                            </li>
+                            <li>
+                                <a
+                                    href="/wishlist"
+                                    class="a-dark rounded"
+                                >
+                                    Kinolar
+                                </a>
+                            </li>
+                            <li>
+                                <a
+                                    href="/wishlist"
+                                    class="a-dark rounded"
+                                >
+                                    Habarlaşmak
+                                </a>
+                            </li>
+                            <li>
+                                <a
+                                    href="/wishlist"
+                                    class="a-dark rounded"
+                                >
+                                    Reklamalar
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                {% comment %} {/* Categories */} {% endcomment %}
+                <li class="mb-1">
+                    <button
+                        class="btn btn-toggle align-items-center rounded collapsed"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#dashboard-collapse"
+                        aria-expanded="false"
+                       style="font-size: 18px;"
+                    >
+                        <strong>Bölümler</strong>
+                    </button>
+                    <div class="collapse" id="dashboard-collapse">
+                        <ul
+                            class="btn-toggle-nav list-unstyled fw-normal pb-1 small mt-2"
+                            style="font-size: 16px;"
+                        >
+                            <li>
+                                <a
+                                    href="/"
+                                    class="a-dark rounded"
+                                >
+                                    Telefon magazyn
+                                </a>
+                            </li>
+                            <li>
+                                <a
+                                    href="/"
+                                    class="a-dark rounded"
+                                >
+                                    Eşik magazyn
+                                </a>
+                            </li>
+                            <li>
+                                <a
+                                    href="/"
+                                    class="a-dark rounded"
+                                >
+                                    Parfýumeriýa
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+
+
+                {% comment %} {/* Orders */} {% endcomment %}
+                <li class="mb-1">
+                    <button
+                        class="btn btn-toggle align-items-center rounded collapsed"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#orders-collapse"
+                        aria-expanded="false"
+                        style="font-size: 18px;"
+                    >
+                        <strong>Bukjalar</strong>
+                    </button>
+                    <div class="collapse" id="orders-collapse">
+                        <ul
+                            class="btn-toggle-nav list-unstyled fw-normal pb-1 small mt-1 ps-2"
+                            style="font-size: 16px;"
+                        >
+                            <li>
+                                <a
+                                    href="/filter/newproducts"
+                                    class="a-dark rounded"
+                                >
+                                    Täze bukjalar
+                                </a>
+                            </li>
+                            <li>
+                                <a
+                                    href="/filter/discountProducts"
+                                    class="a-dark rounded"
+                                >
+                                    Siz üçin bukja
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="mb-1">
+                    <button
+                        class="btn btn-toggle align-items-center rounded collapsed"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#account-collapse"
+                        aria-expanded="false"
+                        style="font-size: 18px;"
+                    >
+                        <strong>Akaunt</strong>
+                    </button>
+                    <div class="collapse" id="account-collapse">
+                        <ul
+                            class="btn-toggle-nav list-unstyled fw-normal pb-1 small mt-1 ps-2"
+                            style="font-size: 16px;"
+                        >
+                            <li>
+                                <a
+                                    href="/filter/newproducts"
+                                    class="a-dark rounded"
+                                >
+                                    Profil
+                                </a>
+                            </li>
+                            <li>
+                                <a
+                                    href="/filter/discountProducts"
+                                    class="a-dark rounded"
+                                >
+                                    Giriş
+                                </a>
+                            </li>
+                            <li>
+                                <a
+                                    href="/filter/discountProducts"
+                                    class="a-dark rounded"
+                                >
+                                    Agza bolmak
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                {% comment %} {/* Divider */} {% endcomment %}
+                <li class="border-top my-3"></li>
+            </ul>
+        </div>
+    </div>
+</div>
+

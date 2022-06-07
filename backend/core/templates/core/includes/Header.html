@@ -1,0 +1,64 @@
+<div class="position-fixed header border-bottom p-3 px-3 px-md-5 row align-items-center">
+    <div class="col-6 col-md-6 col-lg-3  ">
+        <a href="{% url 'core:home' %}" class="text-decoration-none text-black">
+            <span>
+                u<h1 class="d-inline">MM</h1>ansyz
+            </span>
+        </a>
+        
+    </div>
+    <div class="d-none d-lg-flex col-lg-6  pt-1 my-lg-0  align-items-center justify-content-between">
+        <a
+            class="header-link text-decoration-none "
+            href="#bukjalar"
+        >
+            Bukjalar
+        </a>
+        <div class="header-link">Kadalar</div>
+        <div class="header-link">Goşulmak</div>
+        <a class="header-link text-decoration-none" href="#contact">
+            Habarlaşmak
+        </a>
+        <a href="/reklam" class="header-link text-decoration-none">
+            Reklamalar
+        </a>
+    </div>
+    <div class="col-6 col-lg-3 d-flex align-items-center justify-content-end ">
+        <button class="btn blue-outline-btn d-none d-sm-block me-2">
+            Giriş
+        </button>
+        <button class="btn blue-btn text-white  d-none d-sm-block">
+            Agza bolmak
+        </button>
+        
+        <div id="sidebar-toggler">
+            <button
+                aria-label="Show Menu"
+                type="button"
+                data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvasWithBackdrop"
+                aria-controls="offcanvasWithBackdrop"
+                class="d-inline d-lg-none btn  "
+                style="border-radius: 30px;"
+            >
+                <i class="bi bi-list h2"></i>
+            </button>
+            {% include 'core/includes/Sidebar.html' %}
+        </div>
+       
+    </div>
+    <script>
+        let width=0
+        window.addEventListener("resize", updateSize);
+        function updateSize() {
+			size = window.innerWidth
+            console.log(size)
+            if (size < 992) {
+                document.getElementById('sidebar-toggler').style="display:block;"
+            } else {
+                document.getElementById('sidebar-toggler').style="display:none;"
+            }
+		}
+        
+    </script>
+</div>

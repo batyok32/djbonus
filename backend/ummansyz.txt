@@ -1,0 +1,122 @@
+TARIF WEBSITE
+
+{% DONE %} 1. Homepage
+
+2. Authentication - Login Signup
+    Users -> money, name, phone number, email, tarif foreign key blank null true
+    Companies -> feauture
+
+Client:
+    full_name
+    username
+    password
+    email
+    money
+    tarif foreign key
+
+Company:
+
+
+
+Tarif create
+    name
+    price
+
+Feature
+    name = model.CharField("Taxi")     
+    tarifs = models.ManyToMany(Tarif)
+    users = models.ManyToManyField(User, through='ScanCount')
+
+ScanCount
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    feauture = models.ForeignKey(Feature, on_delete=models.CASCADE)    
+    count = models.IntegerField()
+
+taxi_feauture = Feature.objects.create(name="Taxi")
+
+user1= User.objects.create(name="Batyr")
+
+ScanQount.objects.create(user=user, feature=taxi_feauture, count=1)
+
+taxi_feauture.users.all()
+user1.feauture_set.all()
+
+for user in taxi_feauture.users.all():
+    scancount =  ScanQount.objects.get(user=user, feauture=taxi_feauture)
+    print("User {user.name} - count {scancount.count} - {taxi_feauture.name} pay")
+    User batyr - count 1 - Taxi pay
+
+
+3. Add money service
+    enter reference code
+        we are sending reference code when he pays us and we are creating ref code (by call)
+        
+4. Buy tarif
+    - money
+    + tarif
+
+5. Can verify tarif users
+    QR code -> user shows qr code to company (it is generated and valid for 5 minutes)
+        if it is company that scans it, it gets needed information for this user and add + to this feauture scan count
+        else return error
+
+
+BASIC:
+I can login as client 
+Subscribe to tarif 
+Tarif has feautures
+These feautures and tarif is created by admin
+I give my name, phone number
+I have also balanse
+I can upfill this balans if i pay to ummansyz filials
+
+MONEY PUT:
+These filials put money from admin
+And if they put money admins will see it and will take from them
+and my balans will automatically update
+
+COMPANY QR CODE VALIDATION:
+I also has limit on feautures 
+It is written in feauture model 
+Feauture:
+    limit
+    tarif foreign key 
+
+There is also companies 
+and their workers
+they can login and only can
+qrcode users 
+Company worker: -> can qrcode and see user limit 
+    username
+    password 
+    full name 
+    phone number 
+    company
+    
+Company like taxists: -> can see his workers and their qrcode count
+    username
+    password 
+    full name
+    full analytics
+
+full qr code count 
+workers 
+
+
+NOO
+Client can scan qr code 
+Worker only can show qr code
+
+    
+
+
+
+Galan zatlar
+DONE 1. Signup for Company and Client in react frontend
+DONE 2. Get profile information for both of them
+DONE 3. Buy tarifs 
+DONE 4. See my tarifs 
+5. Qrcode scan page
+uses username and password and validate it 
+count +=1 
+6. show Company Qrcode 

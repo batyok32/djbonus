@@ -1,0 +1,14 @@
+<div class="product-container my-2 py-2 my-lg-0">
+    <div class="product  shadow-lg">
+        <div class="product-top p-4">
+            <h3 class="text-center">{{ name }}</h3>
+        </div>
+        <div class="product-bottom p-3">
+            <h4 class="text-center">{{ price }} manat</h4>
+            {% for listItem in listItems %}
+                <hr />
+                {% include "core/includes/ListItem.html" with name="Telefon ekran goraýjysy" desc="Islendik öz telefonyňyza 9D aýna görnüşli telefon ekran goraýjysyny goýdurmak mugt. (4X)" %}
+            {% endfor %}
+        </div>
+    </div>
+</div>

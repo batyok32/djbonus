@@ -1,0 +1,75 @@
+{% extends "core/base.html" %}
+{% load static %}
+{% block title %}Ummansyz{% endblock %} 
+{% block meta_tags %}
+    <link href="{% static 'vendor/core/css/Home.css' %}" rel="stylesheet">
+{% endblock %}
+
+{% block content %}
+    <div class="welcome bg-primary text-center py-5 w-100">
+        <div class="welcome-container text-white">
+            <h1 class=" display-1 fw-bolder">
+                Aňsat durmuş.
+                <br />
+                Gowy ýaşaýyş.
+                <br />
+                Uzak gatnaşyk.
+            </h1>
+            <p class="p-3">
+                Biz size durmuşyňyza ýeňillikler we ökiden hem sada
+                ýaşaýyşyň syryny aýdyň açyp berýäris. <br />
+                <strong class="fs-5">
+                    Geliň siz hem bize goşulyň!
+                </strong>
+            </p>
+        </div>
+    </div>
+    <div class="container my-5">
+        <div class="row row-cols-2 row-cols-lg-4 m-0">
+            <div class="score-item d-flex align-items-center flex-column ">
+                <h1 class="">5</h1>
+                <p>Biz bilen iş alyp barýanlar</p>
+            </div>
+            <div class="score-item d-flex align-items-center flex-column ">
+                <h1>3</h1>
+                <p>Jemi bukjalaň sany</p>
+            </div>
+            <div class="score-item d-flex align-items-center flex-column ">
+                <h1>100</h1>
+                <p>Jemi ulanyjy sany</p>
+            </div>
+            <div class="score-item d-flex align-items-center flex-column ">
+                <h1>100%</h1>
+                <p>Ynamdarlyk</p>
+            </div>
+        </div>
+    </div>
+    <div class="products my-5" id="bukjalar">
+        <h1 class=" text-center my-5">Paket gornusleri</h1>
+        <div class="container">
+            <div class="row row-cols-1 row-cols-lg-3 m-0">
+                {% with ''|center:5 as range %}
+                    {% for _ in range %}
+                        {% include "core/includes/Product.html" with name="Okuwçy bukja" price=40 desc="" listItems="12345"  %}
+                    {% endfor %}
+                {% endwith %}
+                
+            </div>
+        </div>
+    </div>
+
+    <div class="start-today" id="contact">
+        <div class="start-top"></div>
+        <div class="start-middle text-center py-5">
+            <h1>Start building today</h1>
+            <p>
+                Sign up now and you'll be up and running on DigitalOcean
+                in just minutes.
+            </p>
+            <button class="btn btn-white px-4 ">
+                Sign up to get started
+            </button>
+        </div>
+    </div>
+    <script src="{% static 'vendor/core/js/ListItem.js' %}"></script>
+{% endblock %}

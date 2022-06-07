@@ -1,0 +1,75 @@
+.score-item h1 {
+    color: rgb(18, 83, 250);
+    font-weight: bold;
+    margin-bottom: 0;
+}
+
+.score-item p {
+    font-size: 18px;
+    color: rgb(77, 91, 124);
+    font-weight: 500;
+}
+
+.products h1 {
+    color: #031b4e;
+    font-weight: bolder;
+}
+
+.product {
+    border-radius: 10px;
+}
+
+.product-top {
+    background-color: rgb(18, 83, 250);
+    color: #fff;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+.product-top p {
+    letter-spacing: 1px;
+}
+
+.product-item-description {
+    color: rgb(77, 91, 124);
+    font-size: 14px;
+    font-weight: 500;
+}
+.product-bottom h4 {
+    color: #031b4e;
+    font-weight: bold;
+}
+
+.start-today .start-top {
+    background-color: #fff;
+    background-image: url("../../../images/wave.svg");
+    height: 64px;
+}
+
+.start-today .start-middle {
+    background-color: #7bdeff;
+    color: #031b4e;
+}
+.start-middle h1 {
+    font-weight: bolder;
+}
+.start-middle p {
+    color: #4d5b7c;
+}
+
+.start-today .start-bottom {
+    background-color: #fff;
+    background-image: url("../../../images/wave.svg");
+    height: 64px;
+}
+
+.btn-white {
+    color: #081b4b !important;
+    font-weight: 500 !important;
+    background-color: #fff !important;
+    border-radius: 10px !important;
+}
+
+.btn-white:hover {
+    background-color: #7bdeff !important;
+}
